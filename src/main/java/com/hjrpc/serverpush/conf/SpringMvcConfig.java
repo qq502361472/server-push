@@ -11,6 +11,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/ajaxPush").setViewName("/ajax_push");
         registry.addViewController("/defered").setViewName("/defered_comet");
         registry.addViewController("/sse").setViewName("/sse");
+        registry.addViewController("/chat").setViewName("/chat");
     }
 
 }
