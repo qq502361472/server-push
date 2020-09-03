@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+</head>
+<body>
+<textarea id="showContent" style="height: 400px;width: 925px;float: right" readonly="readonly"></textarea>
+<h1 style="width: 250px">聊天</h1>
+<div style="width: 250px">请选择你是谁：</div>
+    <select id="sendFrom" onchange="startConnect();">
+        <option value="1">请选择</option>
+        <option value="HuJian">HuJian</option>
+        <option value="DanMengYing">DanMengYing</option>
+        <option value="LuBin">LuBin</option>
+    </select>
+<div style="width: 250px">请选择发送给谁：</div>
+<select id="sendTo">
+    <option value="1">请选择</option>
+    <option value="HuJian">HuJian</option>
+    <option value="DanMengYing">DanMengYing</option>
+    <option value="LuBin">LuBin</option>
+</select>
+<div style="width: 250px">输入聊天消息：</div>
+<textarea id="writeContext" style="height: 80px;width: 400px;"></textarea>
+<input type="button" value="发送" onclick="sendMessage();">
+<div style="width: 250px">收到聊天消息：</div>
+
+<script th:src="@{jquery.js}"></script>
+<script th:src="@{wbChat.js}"></script>
+</body>
+</html>
